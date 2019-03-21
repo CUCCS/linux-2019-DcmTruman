@@ -115,7 +115,7 @@ mkisofs -r -V "Custom Ubuntu Install CD" \
 
 ```
 
-使用生成的镜像自动安装ubuntu，![视频地址](https://www.bilibili.com/video/av46960059/)
+使用生成的镜像自动安装ubuntu，[视频地址](https://www.bilibili.com/video/av46960059/)
 
 
 
