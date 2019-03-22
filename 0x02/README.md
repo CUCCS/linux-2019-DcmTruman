@@ -6,6 +6,10 @@
 
 ## 实验结果
 
+有些比较短，因为ng了好多次，想着尽可能流畅一些
+
+mbp的touch bar上的esc键不是实体，按得难受，差评
+
 ### Lesson1
 
 [![asciicast](https://asciinema.org/a/3LbnZjnrwgsZtV7ONRn60aZAK.svg)](https://asciinema.org/a/3LbnZjnrwgsZtV7ONRn60aZAK)
