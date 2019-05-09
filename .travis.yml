@@ -12,30 +12,30 @@ before_install:
     - sudo apt-get install ghostscript -y
     - sudo apt-get install imagemagick -y
     - sudo apt-get install p7zip-full -y
-    - mkdir data
-    - wget http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z -P ./data/
-    - wget http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv -P ./data/
-    - 7z x ./data/web_log.tsv.7z -o./data/
+    - mkdir ./0x04/data
+    - wget http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/web_log.tsv.7z -P ./0x04/data/
+    - wget http://sec.cuc.edu.cn/huangwei/course/LinuxSysAdmin/exp/chap0x04/worldcupplayerinfo.tsv -P ./0x04/data/
+    - 7z x ./0x04/data/web_log.tsv.7z -o./0x04/data/
 
 script:
-  - bash ./task/task1.sh --file=./images/ -p "test1"
-  - ls -l ./images/
-  - bash ./task/task1.sh -f ./images/0657cda644f08b4.jpg -q 50 -s "test2"
-  - ls -l ./images/
-  - bash ./task/task1.sh -f ./images/Octicons-cloud-download.svg -c -p "test3"
-  - ls -l ./images/
-  - bash ./task/task1.sh -f ./images/ -r 50 -s "test4"
-  - ls -l ./images/
-  - bash ./task/task1.sh -f ./images/ -m "DcmTruman" -p "test5"
-  - ls -l ./images/
-  - bash ./task/task2.sh
-  - bash ./task/task3.sh
-  - bash ./task/task3.sh /images/ksclogo-medium.gif
+  - bash ./0x04/task/task1.sh --file=./0x04/images/ -p "test1"
+  - ls -l ./0x04/images/
+  - bash ./0x04/task/task1.sh -f ./0x04/images/0657cda644f08b4.jpg -q 50 -s "test2"
+  - ls -l ./0x04/images/
+  - bash ./0x04/task/task1.sh -f ./0x04/images/Octicons-cloud-download.svg -c -p "test3"
+  - ls -l ./0x04/images/
+  - bash ./0x04/task/task1.sh -f ./0x04/images/ -r 50 -s "test4"
+  - ls -l ./0x04/images/
+  - bash ./0x04/task/task1.sh -f ./0x04/images/ -m "DcmTruman" -p "test5"
+  - ls -l ./0x04/images/
+  - bash ./0x04/task/task2.sh
+  - bash ./0x04/task/task3.sh
+  - bash ./0x04/task/task3.sh /images/ksclogo-medium.gif
 
 after_script:
-  - /usr/bin/shellcheck ./task/task1.sh
-  - /usr/bin/shellcheck ./task/task2.sh
-  - /usr/bin/shellcheck ./task/task3.sh
+  - /usr/bin/shellcheck ./0x04/task/task1.sh
+  - /usr/bin/shellcheck ./0x04/task/task2.sh
+  - /usr/bin/shellcheck ./0x04/task/task3.sh
 
 after_failure:
   - id
