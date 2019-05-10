@@ -37,13 +37,7 @@ after_script:
 - "/usr/bin/shellcheck ./0x04/task/task1.sh"
 - "/usr/bin/shellcheck ./0x04/task/task2.sh"
 - "/usr/bin/shellcheck ./0x04/task/task3.sh"
-after_failure:
-- id
-- pwd
-- df -h
-- cat error.log
-
-after_sucess:
+after_success:
 #delete branch
 - git push origin :0x04_images &>/dev/null || return 0
 - git checkout --orphan 0x04_images
@@ -51,6 +45,12 @@ after_sucess:
 - git add *.jpg *.svg *.png *.jpeg
 - git commit -m "add images"
 - git push origin 0x04_images
+after_failure:
+- id
+- pwd
+- df -h
+- cat error.log
+
 
 notifications:
   email:

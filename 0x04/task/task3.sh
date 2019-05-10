@@ -1,7 +1,7 @@
 #!/usr/bin/env bash 
 
 
-FILE_NAME="./data/web_log.tsv"
+FILE_NAME="./0x04/data/web_log.tsv"
 
 
 

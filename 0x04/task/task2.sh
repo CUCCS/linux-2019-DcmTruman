@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-FILE_NAME="./data/worldcupplayerinfo.tsv"
+FILE_NAME="./0x04/data/worldcupplayerinfo.tsv"
 
 #The number and percentage of the different age range 
 function age_range_info_awk()
