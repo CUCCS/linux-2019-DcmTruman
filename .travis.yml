@@ -43,7 +43,7 @@ after_success:
 - git checkout --orphan 0x04_images
 - git rm --cached -r .
 - git status -s
-- git add *.jpg *.svg *.png *.jpeg
+- git add *.jpg *.svg *.png 
 - git status -s
 - git commit -m "add images"
 - git push origin 0x04_images
