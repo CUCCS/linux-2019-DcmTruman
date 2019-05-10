@@ -4,6 +4,10 @@ before_install:
 - openssl aes-256-cbc -K $encrypted_7eb7a7daf6e6_key -iv $encrypted_7eb7a7daf6e6_iv
   -in ssh_key.enc -out ssh_key -d
 - md5sum ssh_key
+- chmod 600 ssh_key
+- eval $(ssh-agent)
+- ssh-add ssh_key
+- git remote set-url origin git@github.com:CUCCS/linux-2019-DcmTruman.git
 - sudo apt-get update -q
 - export scversion="stable"
 - wget "https://storage.googleapis.com/shellcheck/shellcheck-${scversion}.linux.x86_64.tar.xz"
@@ -38,6 +42,16 @@ after_failure:
 - pwd
 - df -h
 - cat error.log
+
+after_sucess:
+#delete branch
+- git push origin :0x04_images &>/dev/null || return 0
+- git checkout --orphan 0x04_images
+- git rm --cached -r .
+- git add *.jpg *.svg *.png *.jpeg
+- git commit -m "add images"
+- git push origin 0x04_images
+
 notifications:
   email:
     on_success: never
