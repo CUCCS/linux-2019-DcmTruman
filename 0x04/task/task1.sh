@@ -171,7 +171,7 @@ function main()
 {
 	if  $HELP_FLAG ;then
 		usage
-		exit 1
+		exit 0
 	fi
 
 	if [[ -z "${IMAGE_PATH}"  ]];then
