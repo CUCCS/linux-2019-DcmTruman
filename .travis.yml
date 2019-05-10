@@ -20,15 +20,15 @@ before_install:
 - 7z x ./0x04/data/web_log.tsv.7z -o./0x04/data/
 script:
 - bash ./0x04/task/task1.sh --help
-- bash ./0x04/task/task1.sh --file=./0x04/images/ -p "test1"
+- bash ./0x04/task/task1.sh --file=./0x04/images/ -p "_prefix_"
 - ls -l ./0x04/images/
-- bash ./0x04/task/task1.sh -f ./0x04/images/0657cda644f08b4.jpg -q 50 -s "test2"
+- bash ./0x04/task/task1.sh -f ./0x04/images/0657cda644f08b4.jpg -q 50 -s "_quality_"
 - ls -l ./0x04/images/
-- bash ./0x04/task/task1.sh -f ./0x04/images/Octicons-cloud-download.svg -c -p "test3"
+- bash ./0x04/task/task1.sh -f ./0x04/images/Octicons-cloud-download.svg -c -p "_convert_"
 - ls -l ./0x04/images/
-- bash ./0x04/task/task1.sh -f ./0x04/images/ -r 50 -s "test4"
+- bash ./0x04/task/task1.sh -f ./0x04/images/ -r 50 -s "_resize_"
 - ls -l ./0x04/images/
-- bash ./0x04/task/task1.sh -f ./0x04/images/ -m "DcmTruman" -p "test5"
+- bash ./0x04/task/task1.sh -f ./0x04/images/ -m "DcmTruman" -p "_watermark_"
 - ls -l ./0x04/images/
 - bash ./0x04/task/task2.sh
 - bash ./0x04/task/task3.sh
